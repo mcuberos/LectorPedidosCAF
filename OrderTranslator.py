@@ -14,11 +14,7 @@ if action=="1":
 '''
 
 if action=="1":
-    pwd=getpass.getpass("INTRODUZCA LA CONTRASEÑA: ")
-    if pwd=="MCG@Trenes":
-        import LoadDatabase
-    else:
-        messagebox.showinfo("Acceso Denegado","La contraseña introducida es incorrecta.")
+    import CreaFicheroLegible
 
 elif action=="2":
     pwd=getpass.getpass("INTRODUZCA LA CONTRASEÑA: ")
