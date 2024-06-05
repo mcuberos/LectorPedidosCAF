@@ -40,16 +40,17 @@ def leer_pdf_interactivamente_y_resaltar(pdf_path, cadena_a_resaltar, output_pat
             print(f"Documento guardado con la cadena resaltada en: {output_path}")
 
         # Esperar la entrada del usuario
-        while True:
+'''      while True:
             decision = input("Presione 'S' para la siguiente cadena o 'N' para detener: ").strip().upper()
             if decision == 'S':
                 break  # Salir del bucle interno para imprimir la siguiente línea
             elif decision == 'N':
                 print("Lectura detenida por el usuario.")
                 return  # Terminar la función
-
+'''
 if __name__ == "__main__":
     pdf_path = "C:/SP/Internacional Hispacold/HC - PROYECTOS INTERNOS/PI-ORG-00040-RW-GENERICO - HERRAMIENTA CAF TRANSLATOR/PEDIDOS BUDAPEST/4100010885 - copia.pdf"  # Reemplaza con la ruta de tu archivo PDF
-    cadena_a_resaltar = "4100010885"  # Reemplaza con la cadena que deseas resaltar
+    cadena_a_resaltar = "9422201"  # Reemplaza con la cadena que deseas resaltar
     output_path = "C:/SP/Internacional Hispacold/HC - PROYECTOS INTERNOS/PI-ORG-00040-RW-GENERICO - HERRAMIENTA CAF TRANSLATOR/PEDIDOS BUDAPEST/4100010885 - resaltado.pdf"  # Reemplaza con la ruta del archivo de salida
     leer_pdf_interactivamente_y_resaltar(pdf_path, cadena_a_resaltar, output_path)
+    
