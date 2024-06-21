@@ -47,7 +47,13 @@ def read_pdf_tables(pdf_path):
               #  print(pd.DataFrame)
                 df = pd.DataFrame(table[1:],columns=table[0])
                 print(df)
+                #nueva_fila = pd.Series([clausula[1], clausula[2], requisito[1],requisito[2],100,requisito[3],requisito[4],requisito[3],nuevo_comentario,requisito[10],requisito[11],requisito[5],requisito[12]], index=dftemp.columns)
+                #dftemp = dftemp._append(nueva_fila, ignore_index=True)
                 tables.append(df)
+    exceltemporal="C:/SP/Internacional Hispacold/HC - PROYECTOS INTERNOS/PI-ORG-00040-RW-GENERICO - HERRAMIENTA CAF TRANSLATOR/PEDIDOS BUDAPEST/excelPrueba.xlsx"
+    writer=pd.ExcelWriter(exceltemporal,engine='xlsxwriter')
+    df.to_excel(writer,'Excel temp',index=False)
+    writer.close()
     return tables
 
 
@@ -81,8 +87,8 @@ def leer_pdf_interactivamente(pdf_path):
 
 pdf_path="C:/SP/Internacional Hispacold/HC - PROYECTOS INTERNOS/PI-ORG-00040-RW-GENERICO - HERRAMIENTA CAF TRANSLATOR/PEDIDOS BUDAPEST/4100010885 - copia.pdf"
 pdf_path2="C:/SP/Internacional Hispacold/HC - PROYECTOS INTERNOS/PI-ORG-00040-RW-GENERICO - HERRAMIENTA CAF TRANSLATOR/PEDIDOS BUDAPEST/4100038691.pdf"
-#read_pdf_tables(pdf_path)
-leer_pdf_interactivamente(pdf_path2)
+read_pdf_tables(pdf_path)
+#leer_pdf_interactivamente(pdf_path2)
 
 
 
